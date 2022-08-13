@@ -5,3 +5,416 @@ main-titles dark-grey: #2C303F;
 paragraph grey: #5b5e6d;
 nav grey: #5b5e6d;
 */
+/* Elements in general */
+
+/* TODO here is a lot more TODO which I will do until next class */
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  /* for use with rem/em; 10px * 1.6 em => 16px */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.container {
+  width: 100vw;
+}
+
+header {
+  margin-top: 130px;
+}
+
+h1,
+h2 {
+  color: #2C303F;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+/*h2+p {
+  text-align: center;
+  font-size: larger;
+}*/
+
+p,
+nav,
+a,
+span,
+ul>li {
+  color: #5B5E6D;
+  font-family: "Open Sans";
+  font-size: larger;
+}
+
+button {
+  font-size: 1.5em;
+  border-radius: 5px;
+  border: 1px solid #192592;
+}
+
+/*! Navbar section elements */
+.navbar {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #AAA;
+}
+
+nav .logo {
+  margin: 1em 2em;
+  max-height: 48px;
+}
+
+.nav-links ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /*display: none;*/
+}
+
+.nav-links li {
+  list-style-type: none;
+}
+
+/*!! */
+.nav-links a {
+  text-decoration: none;
+  margin: 0.5em;
+  padding: 0.4em;
+}
+
+/*!! */
+#hamburger-menu {
+  font-size: 3em;
+
+}
+
+/* Header section elements */
+header {
+  display: flex;
+  background-color: white;
+}
+
+header .content-img {
+  margin: 2em;
+  width: 85%;
+}
+
+#email {
+  width: 84.51vw;
+  margin: 0.5em 0em;
+  padding: 1em 0em;
+  font-size: 1.6em;
+  border: 1px solid #5B5E6D;
+  border-radius: 5px;
+}
+
+button.get-started {
+
+  padding: 16px;
+  margin: 0.5em 0em;
+  background-color: #192592;
+  font-weight: bolder;
+  color: white;
+}
+
+/* Main section elements */
+main .companies {
+  background-color: #F4F3F4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .companies .img-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+}
+
+main .companies .why-btn {
+  font-weight: bolder;
+  color: #192592;
+  background-color: white;
+  padding: 16px;
+}
+
+main .subcontainer.try-it {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #AAA;
+}
+
+.try-it p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2.5em;
+  color: #2C303F;
+}
+
+.try-it>p+p {
+  font-size: 1.6em;
+}
+
+/*!!!
+main .subcontainer p {
+  font-size: 2.5em;
+}*/
+
+/* Footer section elements */
+
+footer ul li {
+  list-style-type: none;
+}
+
+.footer-sub ul>li {
+  display: inline;
+  font-weight: bold;
+}
+
+/*
+.fu+li {
+  list-style-type: none;
+  color: #2C303F;
+  font-size: 4em;
+  border: 1px solid black;
+  font-weight: bold;
+}*/
+
+footer .footer-sub {
+  background-color: #F4F3F4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-sub img {
+  height: 1.61em;
+}
+
+.footer-sub div span {}
+
+@media (max-width: 768px) {
+  button {
+    min-width: 85vw;
+  }
+
+  /* Navbar section elements */
+  /*nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 768px;
+    background-color: white;
+    border-bottom: 1px solid #5B5E6D;
+    justify-content: space-evenly;
+  }
+*/
+  .navbar {
+    flex-direction: row;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar .nav-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    width: 100vw;
+    background-color: #F4F3F4;
+    text-align: center;
+  }
+
+  .nav-links li a {}
+
+  .nav-links .active {
+    display: flex;
+  }
+
+  /*!TODO Make the hamburger menu working*/
+  /* Header section elements */
+  header {
+    flex-direction: column;
+    margin-top: 135px;
+    align-items: center;
+  }
+
+  header h1.heading {
+    margin-left: 7.5vw;
+    display: inline;
+    max-width: 320px;
+    font-size: 5em;
+    align-self: flex-start;
+  }
+
+  header .header-text {
+    margin-left: 7.5vw;
+    font-size: large;
+    max-width: 66vw;
+    align-self: flex-start;
+    line-height: 1.4em;
+  }
+
+  /* Main section elements */
+  h2+p {
+    max-width: 420px;
+
+  }
+
+  main .companies .img-box>img {
+    margin: 3em 0px;
+    padding: 3em 25vw;
+    max-width: 40vw;
+    border-bottom: 1px solid #AAA;
+  }
+
+  main .companies .img-box>img:last-of-type {
+    border: none;
+  }
+
+  /* footer section elements */
+}
+
+@media (min-width: 768px) and (max-width: 960px) {
+
+  /* Navbar section elements */
+  .navbar .nav-links ul {
+    display: none;
+  }
+
+  /* Header section elements */
+  header {
+    flex-direction: column;
+  }
+
+  #email {
+    width: auto;
+  }
+
+  /* Main section elements */
+  main .companies .img-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  main .companies .img-box>img {
+    margin: 0px 0px;
+    padding: 1em 2vw;
+    max-width: 35vw;
+    max-height: 150px;
+    border-bottom: 1px solid #AAA;
+  }
+
+  /* Footer section elements */
+
+}
+
+@media (min-width:960px) and (max-width: 1024px) {
+
+  /* Navbar section elements */
+  .nav-links ul {
+    display: none;
+  }
+
+  /* Main section elements */
+  main .companies .img-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  main .companies .img-box>img {
+    margin: 0px 0px;
+    padding: 1em 2vw;
+    max-width: 25vw;
+    max-height: 150px;
+    border-bottom: 1px solid #AAA;
+  }
+
+  .img-box img {
+    border: 1px solid black;
+  }
+
+
+}
+
+@media (min-width: 1024px) {
+
+  /* Navbar section elements */
+
+  .navbar ul>li {
+    display: inline-block;
+    font-weight: normal;
+  }
+
+  .nav-links ul>li:last-of-type a {
+    margin: 1em 2em;
+    border: 1px solid #5B5E6D;
+    border-radius: 5px;
+  }
+
+  .nav-links ul>li:last-of-type a:hover {
+    background-color: #192592;
+    color: white;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  }
+
+  #hamburger-menu {
+    display: none;
+  }
+
+  /* Header section elements */
+
+
+
+  /* Main section elements */
+  /* TODO This part seems to be redundant, reorder code!*/
+  main .companies .img-box {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  main .companies .img-box>img {
+    margin: 0px 0px;
+    padding: 1em 2vw;
+    max-width: 25vw;
+    max-height: 150px;
+    border-bottom: 1px solid #AAA;
+  }
+
+  main .subcontainer.try-it {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #AAA;
+  }
+
+  main .try-it .input-mail {
+    display: none;
+  }
+}
